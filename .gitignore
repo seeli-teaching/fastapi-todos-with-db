@@ -1,1 +1,6 @@
 __pycache__/
+fastapi-env
+.DS_Store
+.venv
+todo.db
+
