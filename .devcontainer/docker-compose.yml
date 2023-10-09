@@ -7,6 +7,7 @@ services:
       - "5000:5000"
     depends_on:
       - db
+    command: /bin/sh -c "while sleep 1000; do :; done"  
   db:
     image: mysql
     command: "--init-file /data/application/init.sql --default-authentication-plugin=mysql_native_password"
