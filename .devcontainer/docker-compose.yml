@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  web:
+    image: "mcr.microsoft.com/devcontainers/universal:2"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  db:
+    image: mysql
+    command: "--init-file /data/application/init.sql --default-authentication-plugin=mysql_native_password"
+    volumes:
+      - "./init.sql:/data/application/init.sql"
+      - dbdaten:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  
+volumes:
+  dbdaten:
+    name: dbdaten
