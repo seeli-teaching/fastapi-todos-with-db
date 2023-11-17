@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-# URL for MySQL: mysql+pymysql://{user}:{password}@{host}:3306/todo
+# URL for MySQL: mysql+pymysql://{user}:{password}@{host}:3306/tododb
 database_url = os.environ.get("DATABASE_URL", "sqlite:///./todo.db")
 
 
