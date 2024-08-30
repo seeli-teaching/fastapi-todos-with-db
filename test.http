@@ -1,0 +1,42 @@
+@url=http://localhost:8000
+
+### Get Root Message
+GET {{url}}
+
+### Create a new Todo - Spaziergang mit Hund
+POST {{url}}/todos
+Content-Type: application/json
+
+{
+    "title": "Mit dem Hund spazieren gehen",
+    "description" : "30 Minuten Spaziergang für meine Gesundheit investieren und dem Hund eine Freude bereiten"
+}
+
+### Create a new Todo - Abschlussprojekt planen
+POST {{url}}/todos
+Content-Type: application/json
+
+{
+    "title": "Ideen für mein Abschlussprojekt generieren",
+    "description" : "Mit ChatGPT Ideen generieren und diese evaluieren und deren Umsetzung planen"
+}
+
+### Alle Todos abfragen
+GET {{url}}/todos
+
+
+### Get Todo mit der Id 1
+GET {{url}}/todos/1
+
+
+### Todo mit der Id 1 als erledigt setzen
+PUT {{url}}/todos/1
+Content-Type: application/json
+
+{
+   "completed": true
+}
+
+
+### Todo mit der Id 1 löschen
+DELETE {{url}}/todos/1
