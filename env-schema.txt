@@ -1,1 +1,1 @@
-DATABASE_URL=sqlite:///./todos.db
+DATABASE_URL=sqlite:///./todo.db
