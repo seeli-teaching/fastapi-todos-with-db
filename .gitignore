@@ -3,5 +3,5 @@ fastapi-env
 .DS_Store
 .venv
 todo.db
-todos.db
+
 
