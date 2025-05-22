@@ -1,15 +1,8 @@
 {
     "servers": {
         "git": {
-            "command": "docker",
-            "args": [
-                "run",
-                "-i",
-                "--rm",
-                "--mount", "type=bind,src=${workspaceFolder},dst=/workspace",
-                "mcp/git"
-            ],
-            "env": {}
+        "command": "uvx",
+        "args": ["mcp-server-git"]
         }
     }
 }
